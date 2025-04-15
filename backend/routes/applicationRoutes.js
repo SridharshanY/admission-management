@@ -106,6 +106,7 @@ router.post("/submit", authMiddleware, upload.array("documents", 5), async (req,
       guardianOccupation,
       disability,
       ugOrPg,
+      department,
     } = req.body;
     
     const documents = req.files ? req.files.map((file) => file.filename) : [];
@@ -131,6 +132,7 @@ router.post("/submit", authMiddleware, upload.array("documents", 5), async (req,
       guardianOccupation,
       disability: disability === "true" || disability === true, // if sent as string or boolean
       ugOrPg,
+      department,
       documents,
       status: "Pending",
     });

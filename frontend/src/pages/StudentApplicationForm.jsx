@@ -23,6 +23,7 @@ const StudentApplicationForm = () => {
     guardianOccupation: "",
     disability: false,
     ugOrPg: "",
+    department: "",
   });
 
   const [files, setFiles] = useState([]);
@@ -284,7 +285,7 @@ const StudentApplicationForm = () => {
           </div>
 
           {/* Row 6: UG or PG Radio Buttons */}
-          <div className="col-span-4">
+          <div className="col-span-2">
             <label className="block font-semibold">Are you applying for UG or PG?</label>
             <div className="flex space-x-4">
               <label>
@@ -306,6 +307,30 @@ const StudentApplicationForm = () => {
               </label>
             </div>
           </div>
+
+          {/* Department */}
+          <div className="col-span-2">
+            <label className="block font-semibold">Select Department you wish to apply for</label>
+            <div className="flex space-x-4">
+              <label>
+                <select
+                name="department"
+                onChange={handleChange}
+                required
+                >
+                  <option>Select Department</option>
+                  <option value={'B.Sc'}>B.Sc</option>
+                  <option value={'BCA'}>BCA</option>
+                  <option value={'BBA'}>BBA</option>
+                  <option value={'BA'}>BA</option>
+                  <option value={'B.Com'}>B.Com</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+
+
 
           {/* Row 7: File Upload */}
           <div className="col-span-4">

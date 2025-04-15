@@ -78,6 +78,7 @@ const AdminApplicationView = () => {
           <Detail label="📱 Guardian Contact" value={application.guardianContact} />
           <Detail label="💼 Guardian Occupation" value={application.guardianOccupation} />
           <Detail label="♿ Disability" value={application.disability ? "Yes" : "No"} />
+          <Detail label="🏛️ Department" value={application.department} />
         </div>
 
         {/* Documents Section */}

@@ -92,6 +92,7 @@ const ApplicationDetails = () => {
             <p><strong>Class 12 %:</strong> {application.class12Percentage}%</p>
             <p><strong>Passed Year:</strong> {application.passedOutYear}</p>
             <p><strong>Applying for:</strong> {application.ugOrPg}</p>
+            <p><strong>Applying Department:</strong> {application.department}</p>
           </div>
 
           {/* Guardian Details */}

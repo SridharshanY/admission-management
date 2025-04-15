@@ -26,6 +26,7 @@ const applicationSchema = new mongoose.Schema({
   // Other Details
   disability: { type: Boolean, default: false },
   ugOrPg: { type: String, enum: ["UG", "PG"], required: true },
+  department: { type: String, required: true },
   // Application Specific
   documents: [String],
   status: { type: String, enum: ["Pending", "Approved", "Rejected"], default: "Pending" },
